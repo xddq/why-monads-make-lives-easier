@@ -10,19 +10,19 @@
 -- This function has a -> Ma type from the video.
 -- [] is a list in Haskell. Which is built as a Monad.
 -- So our Monad type will be [] instead of M from the video.
-createListWithItem :: (Integral a, Num a) => a -> [a]
+createListWithItem :: a -> [a]
 createListWithItem x = [x]
 
 -- same as createListWithItem applies here.
-addOneAndCreateListWithItem :: (Integral a, Num a) => a -> [a]
+addOneAndCreateListWithItem :: a -> [a]
 addOneAndCreateListWithItem x = [x+1]
 
 -- same as createListWithItem applies here.
-doubleValueAndCreateListWithIt :: (Integral a, Num a) => a -> [a]
+doubleValueAndCreateListWithIt :: a -> [a]
 doubleValueAndCreateListWithIt x = [x*2]
 
 -- same as createListWithItem applies here.
-doInsanceCalculation :: (Integral a, Num a) => a -> [a]
+doInsanceCalculation :: a -> [a]
 doInsanceCalculation x = [(x + 1) * 3]
 
 -- This function basicly has a -> Ma type from the video.
@@ -30,7 +30,7 @@ doInsanceCalculation x = [(x + 1) * 3]
 -- seemingly complex logic.
 -- Ensuring the resulting type in compile time.
 -- Composing as we need.
-shoveIt :: (Integral a,Num a) => a -> [a]
+shoveIt :: a -> [a]
 shoveIt a = createListWithItem a
             >>= addOneAndCreateListWithItem
             >>= doubleValueAndCreateListWithIt
